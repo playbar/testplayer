@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mj_vrplayer_color_gray_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_top_navbar" />
+
+    <TextView
+        android:id="@+id/textview_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@id/layout_title"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="@string/mj_vrplayer_file_msg"
+        android:textColor="@color/mj_vrplayer_color_http_black"
+        android:textSize="11sp" />
+
+    <LinearLayout
+        android:id="@+id/layout_http"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/textview_msg"
+        android:background="@drawable/mj_vrplayer_file_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/mj_vrplayer_file_http"
+            android:textColor="@color/mj_vrplayer_color_file_http_black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="33dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/mj_vrplayer_file_recommend_icon"
+            android:gravity="center"
+            android:text="@string/mj_vrplayer_file_http_recommend"
+            android:textColor="@color/mj_vrplayer_color_white"
+            android:textSize="10sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/mj_vrplayer_icon_more_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:layout_below="@id/layout_http"
+        android:background="@color/mj_vrplayer_color_white"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/mj_vrplayer_color_file_line_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ftp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/line1"
+        android:background="@drawable/mj_vrplayer_file_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/mj_vrplayer_file_ftp"
+            android:textColor="@color/mj_vrplayer_color_file_http_black"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/mj_vrplayer_icon_more_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:layout_below="@id/layout_ftp"
+        android:background="@color/mj_vrplayer_color_white"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/mj_vrplayer_color_file_line_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_flyscreen"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/line2"
+        android:background="@drawable/mj_vrplayer_file_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/mj_vrplayer_file_flyscreen"
+            android:textColor="@color/mj_vrplayer_color_file_http_black"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/mj_vrplayer_icon_more_normal" />
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="0.33dp"
+        android:layout_below="@id/layout_flyscreen"
+        android:background="@color/mj_vrplayer_color_white"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/mj_vrplayer_color_file_line_gray" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_smb"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/line3"
+        android:background="@drawable/mj_vrplayer_file_item"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/mj_vrplayer_file_smb"
+            android:textColor="@color/mj_vrplayer_color_file_http_black"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/mj_vrplayer_icon_more_normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageview_vr"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/mj_vrplayer_button_invr_normal" />
+</RelativeLayout>

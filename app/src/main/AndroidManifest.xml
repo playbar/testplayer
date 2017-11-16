@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.baofeng.mj.vrplayer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <application
+        android:name=".MyAppliaction"
+        android:allowBackup="true"
+        android:alwaysRetainTaskState="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/app_transparent"
+        tools:replace="icon,theme">
+        <activity
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection"
+            android:enableVrMode="@string/gvr_vr_mode_component"
+            android:resizeableActivity="false"
+            android:name=".activity.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="com.google.intent.category.DAYDREAM" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".http.activity.HttpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"/>
+
+        <activity
+            android:name=".activity.FlyScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"/>
+
+        <!--android 6.0授权-->
+        <activity
+            android:name=".activity.ShadowPermissionActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/app_transparent" />
+
+        <activity android:name=".ftp.activity.FtpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent"
+            />
+        <service android:name=".ftp.ftp.FtpServerService" />
+
+        <activity
+            android:name="com.baofeng.mj.unity.UnityActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+        </activity>
+
+
+        <activity
+            android:name="com.baofeng.mj.smb.activity.HelpFeedBackActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.baofeng.mj.smb.activity.SMBAddDeviceActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.baofeng.mj.smb.activity.SMBDeviceListActivirty"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.baofeng.mj.smb.activity.SMBFileListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.baofeng.mj.smb.activity.SMBHelpListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.baofeng.mj.smb.activity.SMBHelpShareActivity"
+            android:screenOrientation="portrait" />
+        <service android:name="com.mj.smb.smblib.service.PlayFileService"></service>
+    </application>
+
+</manifest>

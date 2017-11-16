@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/rl_fly_screen_title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/gray_ef"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_fly_screen_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/content_text_size" />
+
+        <ImageView
+            android:id="@+id/iv_common_problem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/flyscreen_common_problem" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listview_device"
+        style="@style/listviewHasDividerStyle"
+        android:layout_below="@+id/rl_fly_screen_title" />
+
+    <TextView
+        android:id="@+id/tv_fly_screen_parent_dir"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_fly_screen_title"
+        android:background="@drawable/mj_vrplayer_selector_listview_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dip"
+        android:text="返回上一级"
+        android:textColor="@color/prompt_color"
+        android:textSize="@dimen/content_text_size" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_fly_screen_parent_dir"
+        android:background="@color/divider_color" />
+
+    <ListView
+        android:id="@+id/listview_folder"
+        style="@style/listviewHasDividerStyle"
+        android:layout_below="@+id/tv_fly_screen_parent_dir" />
+</RelativeLayout>

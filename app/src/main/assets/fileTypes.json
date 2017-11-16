@@ -1,0 +1,20 @@
+/**
+*配置默认的文件后缀名
+//public static final byte	TYPE_APK = 1; 安装包
+//public static final byte	TYPE_PICTURE = 2; 图片
+//public static final byte	TYPE_MOVIE = 3; 视频
+//public static final byte	TYPE_MUSIC = 4; 音乐
+//public static final byte	TYPE_DOCUMENT = 5; 文档
+//public static final byte	TYPE_ZIP = 6; 压缩包
+*/
+{
+       //图片后缀
+   	//"2" : ["jpg","png","gif"],
+	//视频后缀				
+        "3" :       ["3gp","mp4","avi","rm","rmvb","wmv","asf","3g2","asx","vob","pva","swf","flc","BHD","asm","dsm","tp","3gp2","amv","rpm","ram","wmp","mpeg","ivf","bhd","wv","mts","webm","rp","bik","ratDVD","divx","vid","vg2","scm","wm","vp5","flv","mpg","3gpp","mpe","m1v","vp6","m4p<“m4p”","m2v"
+					,"m4b","m2ts","m4v","ogm","qt","d2v","evo","ts","pss","GHD","csf","vp7","fli","mov","pmp2","tpr","avsts","mod","flic","mkv","sub","pmp","m2p","smk"]
+	//音乐后缀				
+       // "4" : ["mp3","wav","ape","aac"],
+	//文档后缀				
+       // "5" : ["txt","pdf","doc"]
+}

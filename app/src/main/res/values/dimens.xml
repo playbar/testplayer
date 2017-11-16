@@ -1,0 +1,58 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="public_title_height">48dp</dimen>
+
+    <!-- 201704XX版本 改版后，主页面和其他页面Title高度不同-->
+    <dimen name="public_main_title_height">40dp</dimen>
+
+    <!--APP主要字体大小——开始-->
+    <!--用于导航栏文字-->
+    <dimen name="bar_text_size">16sp</dimen>
+    <!--用于重要标题、名称文字-->
+    <dimen name="title_text_size">15sp</dimen>
+    <!--切换顶部导航栏、按钮文字-->
+    <dimen name="btn_text_size">13.3sp</dimen>
+    <!--某些内容文字-->
+    <dimen name="content_text_size">11.3sp</dimen>
+    <!--推荐语、提示文字等-->
+    <dimen name="warn_text_size">10.6sp</dimen>
+    <!--标签、说明文字等-->
+    <dimen name="label_text_size">9.3sp</dimen>
+    <!--APP主要字体大小——结束-->
+
+    <dimen name="line_width">0.67dp</dimen>
+
+    <dimen name="recyle_item_padding">8dp</dimen>
+
+    <dimen name="rank_title_text_size">23sp</dimen>
+
+    <dimen name="home_tab_corner_dimens">20dp</dimen>
+
+    <dimen name="guide_no_glass_marinTop">20sp</dimen>
+
+    <dimen name="handle_connect_marginLeft">26.6dp</dimen>
+
+    <dimen name="handle_img_width">180dp</dimen>
+
+    <dimen name="handle_img_height">100dp</dimen>
+
+    <dimen name="handle_marginTop">16.6dp</dimen>
+
+    <dimen name="handle_img_marginRight">16.6dp</dimen>
+    
+    <dimen name="check_motion_text_size">9.3sp</dimen>
+
+    <dimen name="check_motion_marginTop">3.3dp</dimen>
+
+    <dimen name="check_motion_black_text_size">11.3sp</dimen>
+
+    <dimen name="check_motion_margin">3.3dp</dimen>
+
+    <dimen name="check_motion_text_width">56.6dp</dimen>
+
+    <dimen name="check_motion_text_height">16.6dp</dimen>
+</resources>

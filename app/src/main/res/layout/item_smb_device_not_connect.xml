@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#EFEFEF">
+
+        <TextView
+            android:id="@+id/textview_not_connect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:text="@string/mj_share_smb_device_not_connect"
+            android:textColor="#999999"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/imageview_refresh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/textview_not_connect"
+            android:padding="5dp"
+            android:src="@mipmap/local_airplay_share_icon_reload" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_loading"
+            style="@style/smb_refresh_style"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/textview_not_connect"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDuration="1000"
+            android:indeterminateOnly="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="13dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageview_help"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:src="@mipmap/local_airplay_share_icon_help" />
+
+            <TextView
+                android:id="@+id/textview_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/mj_share_smb_device_help"
+                android:textColor="#999999"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

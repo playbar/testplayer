@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_transparent_color">#00000000</color>
+
+    <!-- 半透明 -->
+    <color name="app_translucent_color">#66000000</color>
+    <color name="app_translucent_white">#ccffffff</color>
+    <color name="app_translucent_color_90">#e6ffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray_7f">#7f7f7f</color>
+    <color name="gray_ea">#eaeaea</color>
+    <color name="gray_ef">#efefef</color>
+    <color name="gray_f6">#f6f6f6</color>
+    <color name="gray_4a">#4a4a4a</color>
+    <color name="gray_cc">#cccccc</color>
+    <color name="gray_88">#888888</color>
+    <color name="black_cc">#88000000</color>
+
+    <color name="btn_disable_color">#63C5FF</color>
+
+    <!-- Main页面Tab颜色-->
+    <color name="main_tab_bg">#1b2128</color>
+    <color name="main_tab_text_pressed">#48afed</color>
+    <color name="main_tab_text_normal">#3881ae</color>
+
+    <!-- 字体灰色-->
+    <color name="btn_normal_color">#4682B4</color>
+
+    <color name="video_text_grey">#a2a2a2</color>
+
+    <!-- list间隔线绿色 -->
+    <color name="game_list_divider_light_green">#0c313b</color>
+    <!-- 本地手->手机->视频模式 背景颜色 -->
+    <color name="local_pageview_mobile_title_green">#aa275767</color>
+    <!-- 按钮上的绿色 -->
+    <color name="button_normal_green">#1E7484</color>
+    <color name="button_pressed_green">#125D6B</color>
+    <color name="res_local_color_light_gray">#F1F1F1</color>
+    <!-- 本地删除等对话框颜色 -->
+    <color name="dialog_sure_green">#1e7484</color>
+
+    <!-- pullToRefresh head背景绿色 改为灰白-->
+    <color name="app_pulltorefresh_green">#DDDDDD</color>
+
+    <color name="color_button_unpress">#1E7484</color>
+    <color name="color_button_pressed">#125D6B</color>
+
+    <!-- 网络判断对话框 -->
+    <color name="pay_color">#6ba54c</color>
+    <color name="pay_failure_color">#d85656</color>
+
+    <!--飞屏-->
+    <color name="fly_screen_url_color">#3881ae</color>
+    <color name="fly_screen_btn_color">#8f7dd5</color>
+    <color name="fly_screen_play_color">#9989d9</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+    <!--本地-->
+    <color name="logout_user_head_bg">#8b74bd</color>
+
+    <!--魔豆充值-->
+    <color name="charge_money_text_color">#ff8a00</color>
+
+    <!--helpList -->
+    <color name="transparent_bg">#00000000</color>
+    <color name="light_grey_bg">#10000000</color>
+    <color name="grey_bg">#20000000</color>
+    <color name="dark_grey_bg">#30000000</color>
+
+    <!--APP竖屏颜色值——开始-->
+    <!--主要信息文字用色，如：标题、名称等主要信息文字-->
+    <color name="title_color">#333333</color>
+    <!--次要文字信息用色，如：文章内容、简介等-->
+    <color name="content_color">#666666</color>
+    <!--提示性用色，如：推荐文案等-->
+    <color name="prompt_color">#999999</color>
+    <!--分割线用色-->
+    <color name="divider_color">#dddddd</color>
+    <!--APP背景色-->
+    <color name="bg_color">#ededed</color>
+    <!-- APP title 紫色  201704XX版本改为白色-->
+    <color name="app_white_title_bg">@color/white</color>
+    <color name="app_purple_title_bg">#ee675195</color>
+    <color name="app_light_gray_title_bg">#F7F7F8</color>
+    <!-- 部分页面图标不配套，改成白色，图标看不见-->
+    <color name="app_purple_title_bg_before">#ee675195</color>
+    <!--VI主色，如：导航栏、标签栏选中等-->
+    <color name="theme_main_color">#7a4fc9</color>
+    <!--VI辅色，如：按钮等-->
+    <color name="theme_auxiliary_color">#388eab</color>
+    <!--辅助色、操作或者提示用色，如：部分按钮和控件、提示类文字、标签等-->
+    <color name="auxiliary_blue_color">#34c0eb</color>
+    <!--辅助色、操作或者提示用色，如：部分按钮和控件、提示类文字、标签等-->
+    <color name="auxiliary_yellow_color">#ff8a00</color>
+    <!--辅助色、操作或者提示用色，如：部分按钮和控件、提示类文字、标签等-->
+    <color name="auxiliary_red_color">#f4534b</color>
+    <!--APP竖屏颜色值——结束-->
+
+    <!--90%半透明背景-->
+    <color name="translucent_bg_90">#E6000000</color>
+    <!--50%半透明背景-->
+    <color name="translucent_bg_50">#80000000</color>
+    <color name="video_type_bg">#4D000000</color>
+    <color name="normal_text_color">#999999</color>
+    <color name="selected_text_color">#34C0EB</color>
+    <color name="disable_text_color">#666666</color>
+    <color name="translucent_selected_text_color">#4C34C0EB</color>
+    <color name="current_time_text_color">#34C0EB</color>
+    <color name="total_time_text_color">#4D34C0EB</color>
+    <color name="seekbar_bg_color">#333333</color>
+    <color name="video_type_list_divider">#33ffffff</color>
+
+    <!--0927版本新加引导页 -->
+
+    <color name="guide_purple_bg">#684ea0</color>
+    <color name="guide_purple_btn">#493670</color>
+
+    <color name="mj_color_contraller_background_gray">#bb000000</color>
+    <color name="mj_color_white">#ffffff</color>
+    <color name="mj_color_blue">#075DEC</color>
+
+    <color name="player_bottom_contraller_land">#7a4fc9</color>
+    <color name="player_bottom_contraller_prot">#ffffff</color>
+    <color name="player_bottom_prot_bg">#33000000</color>
+    <color name="player_title_bg">#e51a2028</color>
+    <color name="glasses_line">#f2f2f2</color>
+
+    <color name="problem_text_no_selected">#999999</color>
+    <color name="problem_text_bg">#7a4fc9</color>
+    <color name="problem_commit_btn_bg">#7a4fc9</color>
+    <color name="problem_no_commit_btn_bg">#dddddd</color>
+
+    <color name="mj_color_orange">#ff8a00</color>
+    <color name="mj_color_rank_alpha_white">#33ffffff</color>
+    <color name="mj_color_rank_blue">#56bbe1</color>
+    <color name="mj_player_popview_bg">#b21a2028</color>
+
+    <color name="handle_connect_open_color">#7a4fc9</color>
+
+    <!-- 20170420改UI-->
+    <color name="tab_highlight_text_color">#564a94</color>
+    <color name="tab_normal_text_color">#262626</color>
+
+    <color name="list_item_text_color">#404040</color>
+    <color name="list_item_content_color">#999999</color>
+
+    <color name="list_item_text_name_color">#4C4189</color>
+
+    <color name="play_select_grid_item_text_click">#00c6ff</color>
+    <color name="play_select_grid_item_text_normal">#ffffff</color>
+
+    <color name="bg_img_load">#dddddd</color>
+    <color name="bg_black_transparent">#99000000</color>
+
+    <color name="play_list_selector_press">#444444</color>
+    <color name="play_list_selector_normal">#00000000</color>
+</resources>

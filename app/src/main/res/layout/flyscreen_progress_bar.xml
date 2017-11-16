@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_fly_screen_loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="1dp"
+    android:background="@color/bg_color"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/ll_fly_screen_loading"
+        android:layout_width="100dp"
+        android:layout_height="176dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp">
+
+        <com.baofeng.mj.vrplayer.widget.FlyScreenSearchProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_fly_screen_scanning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_fly_screen_loading"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dip"
+        android:text="@string/flyscreen_scanning_resource"
+        android:textColor="@color/prompt_color"
+        android:textSize="@dimen/title_text_size" />
+
+</RelativeLayout>

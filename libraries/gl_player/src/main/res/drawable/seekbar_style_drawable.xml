@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background">
+        <shape>
+            <solid android:color="@color/seekbar_bg_color" />
+            <corners android:radius="5dip" />
+            <gradient
+                android:endColor="@color/seekbar_bg_color"
+                android:startColor="@color/seekbar_bg_color" />
+        </shape>
+    </item>
+
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape>
+                <corners android:radius="5dip" />
+                <gradient
+                    android:endColor="@color/disable_text_color"
+                    android:startColor="@color/disable_text_color" />
+            </shape>
+        </clip>
+    </item>
+
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="5dip" />
+                <gradient
+                    android:endColor="#6933c2"
+                    android:startColor="#418ccd" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+&lt;!&ndash;
+        <rotate xmlns:android="http://schemas.android.com/apk/res/android"
+        android:pivotX="50%" android:pivotY="50%" android:fromDegrees="0"
+        android:toDegrees="360"> <shape android:shape="ring"
+        android:innerRadiusRatio="3" android:thicknessRatio="8"
+        android:useLevel="false"> <gradient android:type="sweep"
+        android:useLevel="false" android:startColor="#FFFFFF"
+        android:centerColor="#FFDC35" android:centerY="0.50"
+        android:endColor="#CE0000" /> </shape> </rotate>
+&ndash;&gt;
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate android:drawable="@drawable/dialog_progress_round"
+            android:fromDegrees="0.0" android:toDegrees="360.0" android:pivotX="50.0%"
+            android:pivotY="50.0%" />
+    </item>
+</layer-list>
+-->

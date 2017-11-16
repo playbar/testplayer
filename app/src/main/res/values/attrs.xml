@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MainTabItem">
+        <attr name="imageDrawable" format="reference|color"/>
+        <attr name="imageBackground" format="reference|color"/>
+        <attr name="text" format="reference|string"/>
+        <attr name="textColor" format="reference|string"/>
+    </declare-styleable>
+
+    <!-- 下划线Tab控件-->
+    <declare-styleable name="UnderLineRadioButton">
+        <attr name="underLineImageDrawable" format="reference|color"/>
+        <attr name="underLineImageBackground" format="reference|color"/>
+        <attr name="underLineText" format="reference|string"/>
+        <attr name="underLineTextColor" format="reference|string"/>
+    </declare-styleable>
+
+    <!-- 空页面 -->
+    <declare-styleable name="EmptyView">
+        <attr name="imageWarn" format="reference|color"/>
+        <attr name="textWithoutNetwork" format="reference|string"/>
+        <attr name="textNormal" format="reference|string"/>
+        <attr name="textLoading" format="reference|string"/>
+        <attr name="textFailure" format="reference|string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircularImageView">
+        <attr name="border" format="boolean"/>
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+        <attr name="shadow" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="Theme">
+        <attr name="circularImageViewStyle" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="TabItemView">
+        <attr name="android:text"/>
+        <attr name="android:textColor"/>
+    </declare-styleable>
+    <declare-styleable name="IrregularRateView">
+        <attr name="android:textColor"/>
+    </declare-styleable>
+
+    <declare-styleable name="DemoRoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension"></attr>
+        <attr name="textColorProgressBar" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer"></attr>
+        <attr name="startAngle" format="float"></attr>
+        <attr name="textIsDisplayable" format="boolean"></attr>
+        <attr name="style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+    </declare-styleable>
+
+    <!-- MoreTextView控件-->
+    <declare-styleable name="MoreTextStyle">
+        <attr name="moreTextSize" format="reference|dimension"/>
+        <attr name="moreTextColor" format="reference|string"/>
+        <attr name="moreMaxLine" format="integer" />
+        <attr name="moreText" format="reference|string" />
+    </declare-styleable>
+
+    <!--在详情页，标签有可能需要换行，使用此属性在CustomViewGroup中判断是否为详情页-->
+    <declare-styleable name="DetailActivityLabel">
+        <attr name="isDetailActivity" format="boolean"/>
+    </declare-styleable>
+</resources>

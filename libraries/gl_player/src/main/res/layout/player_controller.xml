@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_player_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- 顶部控制栏 -->
+    <include layout="@layout/player_controller_bar_top" />
+    <!-- 底部控制栏 -->
+    <include layout="@layout/player_controller_bar_bottom" />
+
+
+</RelativeLayout>

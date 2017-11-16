@@ -1,0 +1,174 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- application样式 -->
+    <style name="app_transparent" parent="@android:style/Theme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@style/startActivityAnimation</item>
+    </style>
+
+    <!-- 灰色水平分割线 -->
+    <style name="grayHorizontalLine">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/colorGrayDivider</item>
+    </style>
+
+    <!-- 灰色垂直分割线 -->
+    <style name="grayVerticalLine">
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorGrayDivider</item>
+    </style>
+
+    <!-- listview基本样式 -->
+    <style name="listviewBaseStyle">
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:scrollingCache">false</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:listSelector">@drawable/mj_vrplayer_selector_listview_bg</item>
+    </style>
+
+    <!-- listview样式 没有分割线 -->
+    <style name="listviewNoDividerStyle" parent="listviewBaseStyle">
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0.0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.0dp</item>
+        <item name="android:layout_weight">1.0</item>
+    </style>
+
+    <!-- listview样式 有分割线 -->
+    <style name="listviewHasDividerStyle" parent="listviewBaseStyle">
+        <item name="android:divider">@color/colorGrayDivider</item>
+        <item name="android:dividerHeight">0.33dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- pullToRefreshListView样式 -->
+    <style name="pullToRefreshListViewStyle">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:divider">@android:color/transparent</item>
+        <item name="android:dividerHeight">0.0dp</item>
+        <item name="android:headerDividersEnabled">false</item>
+        <item name="android:footerDividersEnabled">false</item>
+        <item name="android:fastScrollEnabled">false</item>
+        <item name="android:smoothScrollbar">true</item>
+        <item name="android:scrollbars">none</item>
+        <item name="android:fadingEdge">none</item>
+        <item name="android:fadingEdgeLength">0dp</item>
+        <item name="android:listSelector">@drawable/mj_vrplayer_selector_listview_bg</item>
+    </style>
+
+    <!-- PopupWindow动画 -->
+    <style name="popAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_show</item>
+        <item name="android:windowExitAnimation">@anim/pop_hide</item>
+    </style>
+
+    <!-- 基本对话框 -->
+    <style name="base_dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- 半透明对话框 -->
+    <style name="translucence_dialog" parent="base_dialog">
+        <item name="android:backgroundDimAmount">0.5</item>
+    </style>
+
+    <style name="mj_vrplayer_loading_style">
+        <item name="android:indeterminateDrawable">@drawable/mj_vrplayer_loading</item>
+        <item name="android:minWidth">30dp</item>
+        <item name="android:maxWidth">30dp</item>
+        <item name="android:minHeight">30dp</item>
+        <item name="android:maxHeight">30dp</item>
+    </style>
+    <style name="upgradefilleseekbar_playbg" parent="android:Widget.SeekBar">
+        <item name="android:indeterminate">false</item>
+        <item name="android:progressDrawable">@drawable/progress_play_bg</item>
+        <item name="android:minHeight">3dip</item>
+        <item name="android:maxHeight">3dip</item>
+        <item name="android:thumb">@mipmap/upload_slider_progress_round</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- app title 标题返回键样式 -->
+    <style name="app_title_back_btn_style">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">@dimen/public_title_height</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:src">@mipmap/nav_icon_back</item>
+    </style>
+
+    <!-- app title 标题字体样式 -->
+    <style name="app_title_text_style" parent="@style/wrap_content_style">
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:maxLength">26</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/tab_normal_text_color</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--普通view父样式之包含内容-->
+    <style name="wrap_content_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <!-- loading样式 -->
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimAmount">0</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="SMB_Loging_Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="smb_refresh_style">
+        <item name="android:indeterminateDrawable">@drawable/mj_smb_refresh</item>
+        <item name="android:minWidth">20dip</item>
+        <item name="android:maxWidth">20dip</item>
+        <item name="android:minHeight">20dip</item>
+        <item name="android:maxHeight">20dip</item>
+    </style>
+
+</resources>

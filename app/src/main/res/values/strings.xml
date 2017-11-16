@@ -1,0 +1,110 @@
+<resources>
+    <string name="app_name">魔镜VR播放器</string>
+
+    <string name="mj_vrplayer_http">HTTP/WiFi传输</string>
+    <string name="mj_vrplayer_ftp">FTP传输</string>
+    <string name="mj_vrplayer_http_msg">请使用PC浏览器访问下列地址：</string>
+    <string name="mj_vrplayer_ftp_msg">请使用PC-FTP客户端访问下列地址：</string>
+    <string name="mj_vrplayer_wifi_no">WIFI连接异常</string>
+    <string name="mj_vrplayer_file_msg">魔镜为您提供了四种方式将电脑上文件便捷的传输到手机中查看</string>
+    <string name="mj_vrplayer_file_http">HTTP/WiFi</string>
+    <string name="mj_vrplayer_file_ftp">FTP Server</string>
+    <string name="mj_vrplayer_file_flyscreen">魔镜飞屏</string>
+    <string name="mj_vrplayer_file_smb">SMB</string>
+    <string name="mj_vrplayer_file_http_recommend">推荐</string>
+    <string name="mj_vrplayer_main_exit_msg">再按一次退出</string>
+    <!-- 飞屏 -->
+    <string name="flyscreen_is_what">飞屏是什么</string>
+    <string name="flyscreen_brief_introduction">飞屏功能可以让你使用手机直接播放\n电脑上的视频</string>
+    <string name="flyscreen_how_to_use">学习如何使用</string>
+    <string name="flyscreen_skip_guide">跳过使用帮助</string>
+    <string name="flyscreen_guide_step_1">1 / 3</string>
+    <string name="flyscreen_guide_step_2">2 / 3</string>
+    <string name="flyscreen_guide_step_3">3 / 3</string>
+    <string name="flyscreen_download_app">用电脑下载安装飞屏应用</string>
+    <string name="flyscreen_download_address">下载地址</string>
+    <string name="flyscreen_download_url">http://mj.mojing.cn</string>
+    <string name="flyscreen_next_step">下一步</string>
+    <string name="flyscreen_play">播放</string>
+    <string name="flyscreen_scanning_resource">正在扫描飞屏资源...</string>
+    <string name="flyscreen_common_problem">常见问题</string>
+    <string name="flyscreen_device_list">设备列表</string>
+    <string name="flyscreen_device_not_found">没有找到可用的飞屏资源</string>
+    <string name="flyscreen_please_confirm">请确保</string>
+    <string name="flyscreen_computer_installed">1.电脑端已经安装并运行飞屏应用</string>
+    <string name="flyscreen_in_same_lan">2.电脑与手机连接了相同的Wi-Fi热点</string>
+    <string name="flyscreen_rescan">点击重新扫描</string>
+    <string name="flyscreen_help">飞屏使用帮助</string>
+    <string name="flyscreen_password_error">取消PC端飞屏密码设置</string>
+    <string name="flyscreen_reconnect">PC设备已连接飞屏，请断开重新连接</string>
+    <string name="flyscreen_instruction">飞屏使用说明</string>
+    <string name="flyscreen_serverclosed">飞屏服务器已经关闭，屏幕将跳转到设备页</string>
+    <string name="flyscreen_resource_fail">飞屏资源获取失败</string>
+    <string name="flyscreen_resource_fail_notlogin">未登陆,获取资源失败</string>
+    <string name="flyscreen_network_error">找不到任何飞屏设备，请打开你的 Wi-Fi 开关</string>
+    <string name="flyscreen_preview">预览</string>
+    <string-array name="flyscreen_questions">
+        <item>Q1: 支持的设备</item>
+        <item>Q2: 为什么搜不到设备?</item>
+        <item>Q3: 怎么添加视频?</item>
+        <item>Q4: 飞屏支持的格式</item>
+    </string-array>
+
+    <!--   局域网共享  -->
+    <string name="mj_share_smb">局域网共享播放</string>
+    <string name="mj_share_smb_smg">直接播放电脑共享文件夹中的视频</string>
+    <string name="mj_share_smb_first_msg">使用局域网共享功能，你需要一台与手机处在同一网络下的电脑，将电脑上的文件夹设置为共享，即可通过手机进行访问，播放视频</string>
+    <string name="mj_share_smb_first_tell_me"><u>告诉我如何在电脑上共享文件</u></string>
+    <string name="mj_share_smb_first_setting_ok">我设置好了，马上连接</string>
+    <string name="mj_share_fly">飞屏播放</string>
+    <string name="mj_share_fly_smg">使用飞屏客户端播放电脑上的视频</string>
+    <string name="mj_share_smb_device_not_connect">可连接设备</string>
+    <string name="mj_share_smb_device_connected">连接</string>
+    <string name="mj_share_smb_device_help">帮助</string>
+    <string name="mj_share_smb_login_title_linkto">连接到</string>
+    <string name="mj_share_smb_login_edit_name">账号</string>
+    <string name="mj_share_smb_login_edit_password">密码</string>
+    <string name="mj_share_smb_login_help">登录账号？</string>
+    <string name="mj_share_smb_login_guest"><u>Guest登录账号</u></string>
+    <string name="mj_share_smb_login_cancle">取消</string>
+    <string name="mj_share_smb_login_ok">登录</string>
+    <string name="mj_share_smb_login_title_error">连接失败</string>
+    <string name="mj_share_smb_login_title_no_password">请输入账号和密码</string>
+    <string name="mj_share_smb_login_title_no_authority">没用权限访问，请输入账号和密码登录</string>
+    <string name="mj_share_smb_login_title_error_password">请正确输入账号和密码</string>
+    <string name="mj_share_smb_device_delete_item">确认删除连接吗？</string>
+    <string name="mj_share_smb_device_no_list_1">没有找到可用的共享资源</string>
+    <string name="mj_share_smb_device_no_list_2">请确保</string>
+    <string name="mj_share_smb_device_no_list_3">1.电脑端已经设置了共享文件</string>
+    <string name="mj_share_smb_device_no_list_4">2.电脑与手机连接了相同的Wi-Fi热点</string>
+    <string name="mj_share_smb_device_no_list_button">点击重新扫描</string>
+    <string name="mj_share_smb_file_unit">个文件</string>
+    <string name="mj_share_smb_file_only_video">仅支持视频</string>
+    <string name="mj_share_smb_file_load_error">加载失败</string>
+    <string name="mj_share_smb_file_sort_time">按照添加时间从新到旧</string>
+    <string name="mj_share_smb_file_sort_filename">按照文件名排序</string>
+    <string name="mj_share_smb_file_sort_size">按照文件大小从大到小</string>
+    <string name="mj_share_smb_add_device_ip">主机IP地址</string>
+    <string name="mj_share_smb_add_device_must">必填</string>
+    <string name="mj_share_smb_add_device_name">用户名</string>
+    <string name="mj_share_smb_add_device_password">密码</string>
+    <string name="mj_share_smb_add_device_creat_link">新建连接</string>
+    <string name="mj_share_smb_add_device_link">连接</string>
+    <string name="mj_share_smb_add_device_link_error">连接失败</string>
+    <string name="mj_share_smb_add_device_link_please_true">请正确填写主机IP地址</string>
+    <string name="mj_share_smb_add_device_link_ok">确定</string>
+    <string name="mj_share_smb_help_share">如何在电脑上共享文件</string>
+    <string name="mj_share_smb_help_question">常见问题</string>
+    <string name="mj_share_smb_help_share_1">1、确保你的手机和电脑连接在同一路由器</string>
+    <string name="mj_share_smb_help_share_2">2、在电脑上找到你想共享的文件夹，鼠标指针在文件夹上点击右键选择 “属性”，然后在弹出的窗口选择 “共享” 选项卡，并点击出现界面中的 “共享” 按钮</string>
+    <string name="mj_share_smb_help_share_3">3、确保弹出的窗口列表中已经存在你的登录账号，若不存在则点击列表上方的下拉框进行添加，最后点击右下角的 “共享” 按钮完成整个共享操作</string>
+    <string name="mj_share_smb_not_WIFI">找不到可用WiFi</string>
+
+    <string name="load_data_failure">数据加载失败</string>
+    <string name="no_date">暂无数据</string>
+    <string name="loading_text">正在加载…</string>
+    <string name="no_content">没有找到内容</string>
+
+    <string name="help_and_feedback_title">帮助与反馈</string>
+    <string name="opinion_feed_back">意见反馈</string>
+</resources>

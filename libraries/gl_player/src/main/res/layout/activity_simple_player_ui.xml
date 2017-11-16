@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/topBlackImage"
+            android:layout_width="match_parent"
+            android:layout_height="33dp"
+            android:background="@drawable/play_touch_bg_black" />
+
+        <com.mojing.vrplayer.simpleview.PlayControlView
+            android:id="@+id/playcontrolview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="切换"
+            android:textColor="#000"
+            android:visibility="gone" />
+
+        <com.mojing.vrplayer.simpleview.PlaySettingsView
+            android:id="@+id/playsettingsview"
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" />
+
+        <com.mojing.vrplayer.simpleview.PlaySelectSourceView
+            android:id="@+id/playseletview"
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" />
+
+
+        <com.mojing.vrplayer.simpleview.PlayHDSelectView
+            android:id="@+id/playhdseletdview"
+            android:layout_width="230dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:visibility="gone" />
+
+        <com.mojing.vrplayer.simpleview.PlayModeView
+            android:id="@+id/playmodeview"
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/mj_vrplayer_mode_menu_backgound"
+            android:visibility="gone" />
+        <!--只在触屏播放全屏模式先显示-->
+        <RelativeLayout
+            android:id="@+id/tip_dialog_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <com.mojing.vrplayer.simpleview.PlayerDialogView
+                android:id="@+id/player_exception_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <com.mojing.vrplayer.simpleview.PlayerDialogView
+                android:id="@+id/player_replay_dialog"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+            <com.mojing.vrplayer.simpleview.SingleLoadingView
+                android:id="@+id/loadingview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <com.mojing.vrplayer.simpleview.PlayToastView
+                android:id="@+id/play_toast_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="80dp"
+                android:background="@drawable/corner_player_loading_bg"
+                android:visibility="gone" />
+
+            <com.mojing.vrplayer.simpleview.PlayerSeekToastView
+                android:id="@+id/player_seek_toast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/subtitlefontsize_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:gravity="center_horizontal"
+                android:text=""
+                android:textColor="#ffbbbbbb"
+                android:textSize="13.3sp"
+                android:visibility="visible" />
+        </RelativeLayout>
+        <!--end  只在触屏播放全屏模式先显示-->
+    </RelativeLayout>
+
+</RelativeLayout>

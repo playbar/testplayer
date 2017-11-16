@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('sdk-base-1.20.0.aar'))

@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/pb_left_loading"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rl_remote_player_pause_left_layout"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/corner_remote_player_controller_bg"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_remote_controller_left_pause"
+                android:layout_width="10.6dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/remote_controller_pause" />
+
+            <TextView
+                android:id="@+id/tv_remote_controller_left_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_remote_controller_left_pause"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:text="已暂停"
+                android:textColor="#ffececec"
+                android:textSize="5sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_remote_player_volume_left_layout"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/corner_remote_player_controller_bg"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_remote_player_left_volume"
+                android:layout_width="14.3dp"
+                android:layout_height="13.3dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/remote_controller_volume" />
+
+            <ProgressBar
+                android:id="@+id/pb_remote_player_left_volume"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="47dp"
+                android:layout_height="3dp"
+                android:layout_below="@id/iv_remote_player_left_volume"
+                android:layout_marginTop="10dp"
+                android:indeterminateOnly="false"
+                android:layerType="software"
+                android:max="100"
+                android:progress="40"
+                android:progressDrawable="@drawable/remote_volume_progressbar_bg" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_remote_player_progress_left_layout"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/corner_remote_player_controller_bg"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_remote_player_left_progress"
+                android:layout_width="14.3dp"
+                android:layout_height="8.5dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/tv_remote_player_left_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_remote_player_left_progress"
+                android:layout_marginTop="10dp"
+                android:minWidth="23dp"
+                android:singleLine="true"
+                android:text="00:00:00"
+                android:textColor="@color/theme_main_color"
+                android:textSize="5sp" />
+
+            <TextView
+                android:id="@+id/tv_remote_player_left_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_remote_player_left_current_time"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_remote_player_left_current_time"
+                android:minWidth="23dp"
+                android:singleLine="true"
+                android:text="/ 00:00:00"
+                android:textColor="@color/prompt_color"
+                android:textSize="5sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/pb_right_loading"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/rl_remote_player_pause_right_layout"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/corner_remote_player_controller_bg"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_remote_controller_right_pause"
+                android:layout_width="10.6dp"
+                android:layout_height="15dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/remote_controller_pause" />
+
+            <TextView
+                android:id="@+id/tv_remote_controller_right_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_remote_controller_right_pause"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:text="已暂停"
+                android:textColor="#ffececec"
+                android:textSize="5sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_remote_player_volume_right_layout"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/corner_remote_player_controller_bg"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_remote_player_right_volume"
+                android:layout_width="14.3dp"
+                android:layout_height="13.3dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/remote_controller_volume" />
+
+            <ProgressBar
+                android:id="@+id/pb_remote_player_right_volume"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="47dp"
+                android:layout_height="3dp"
+                android:layout_below="@id/iv_remote_player_right_volume"
+                android:layout_marginTop="10dp"
+                android:indeterminateOnly="false"
+                android:layerType="software"
+                android:max="100"
+                android:progress="0"
+                android:progressDrawable="@drawable/remote_volume_progressbar_bg" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_remote_player_progress_right_layout"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_centerInParent="true"
+            android:background="@drawable/corner_remote_player_controller_bg"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_remote_player_right_progress"
+                android:layout_width="14.3dp"
+                android:layout_height="8.5dp"
+                android:layout_centerHorizontal="true"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/tv_remote_player_right_current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_remote_player_right_progress"
+                android:layout_marginTop="10dp"
+                android:minWidth="23dp"
+                android:singleLine="true"
+                android:text="00:00:00"
+                android:textColor="@color/theme_main_color"
+                android:textSize="5sp" />
+
+            <TextView
+                android:id="@+id/tv_remote_player_right_total_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tv_remote_player_right_current_time"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/tv_remote_player_right_current_time"
+                android:minWidth="23dp"
+                android:singleLine="true"
+                android:text="/ 00:00:00"
+                android:textColor="@color/prompt_color"
+                android:textSize="5sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

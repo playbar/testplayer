@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!-- 灰色分割线 -->
+    <color name="colorGrayDivider">#dddddd</color>
+    <!-- 底部tab背景 -->
+    <color name="colorBottomTabBg">#e6f8f8f9</color>
+    <!-- 底部tab字体 选中 -->
+    <color name="colorBottomTabTextHigh">#508cfe</color>
+    <!-- 底部tab字体 正常 -->
+    <color name="colorBottomTabTextNormal">#aaaaaa</color>
+    <!-- 灰色1 -->
+    <color name="colorGrayOne">#333333</color>
+    <!-- 灰色2 -->
+    <color name="colorGrayTwo">#666666</color>
+    <!-- 灰色3 -->
+    <color name="colorGrayThree">#999999</color>
+    <!-- 灰色背景 -->
+    <color name="colorGrayBg">#dddddd</color>
+    <!-- 布局背景 -->
+    <color name="colorLayoutBg">#ededed</color>
+    <!-- 暗色背景 -->
+    <color name="colorDarkBg">#f219191a</color>
+    <!-- 全透明 -->
+    <color name="colorTransparent">#00000000</color>
+    <!-- 半透明 -->
+    <color name="colorTranslucent">#66000000</color>
+    <!-- 深蓝色字体 -->
+    <color name="colorDarkBlueText">#00c6ff</color>
+    <!-- 亮蓝色字体 -->
+    <color name="colorLightBlueText">#508cfe</color>
+
+    <color name="mj_vrplayer_color_white">#ffffff</color>
+    <color name="mj_vrplayer_color_gray_bg">#ededed</color>
+    <color name="mj_vrplayer_color_http_black">#999999</color>
+    <color name="mj_vrplayer_color_http_ip_blue">#508cfe</color>
+    <color name="mj_vrplayer_color_file_http_black">#333333</color>
+    <color name="mj_vrplayer_color_file_line_gray">#dddddd</color>
+
+    <!-- APP title 紫色  201704XX版本改为白色-->
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="app_white_title_bg">@color/white</color>
+    <color name="tab_normal_text_color">#262626</color>
+    <color name="theme_main_color">#7a4fc9</color>
+    <color name="transparent_bg">#00000000</color>
+
+    <!-- smb  -->
+    <color name="smb_login_title_black">#333333</color>
+    <color name="smb_login_title_red">#F4534B</color>
+    <color name="smb_login_button_purple">#7a4fc9</color>
+    <color name="game_rank_tab_default">#ebebeb</color>
+    <color name="game_rank_tab_selected">#1790de</color>
+    <color name="game_rank_tab_text_color_default">#9d9d9d</color>
+</resources>

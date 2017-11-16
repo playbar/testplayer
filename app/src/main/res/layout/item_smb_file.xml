@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff">
+
+    <ImageView
+        android:id="@+id/imageview_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:id="@+id/textview_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageview_icon"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="23dp"
+        android:textSize="13sp"
+        android:textColor="#262626"/>
+
+    <TextView
+        android:id="@+id/textview_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/imageview_icon"
+        android:layout_below="@id/textview_name"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="23dp"
+        android:textSize="12sp"
+        android:textColor="#333333"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/textview_ip"
+        android:background="#dddddd"
+        android:layout_marginLeft="13dp"
+        android:layout_marginRight="13dp"/>
+</RelativeLayout>

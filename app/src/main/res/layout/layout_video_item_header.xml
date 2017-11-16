@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:paddingLeft="10dp"
+    android:gravity="center_vertical"
+    android:background="@color/mj_vrplayer_color_gray_bg"
+    android:textColor="@color/colorGrayThree"
+    android:textSize="12sp"/>

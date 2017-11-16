@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:gravity="center"
+	android:orientation="vertical">
+
+	<FrameLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content">
+		<ImageView
+			android:layout_marginRight="2dp"
+			android:id="@+id/iv_icon"
+			android:layout_width="24dp"
+			android:layout_height="24dp"
+			android:layout_marginTop="6dp"
+			android:layout_marginBottom="4dp"
+			android:src="@mipmap/ic_launcher"/>
+		<ImageView
+			android:id="@+id/iv_tag"
+			android:paddingTop="3dp"
+			android:visibility="gone"
+			android:layout_width="wrap_content"
+			android:layout_gravity="top|right"
+			android:src="@mipmap/video_label_red"
+			android:layout_height="wrap_content" />
+	</FrameLayout>
+
+	<TextView
+		android:id="@+id/tv_name"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="6dp"
+		android:textColor="@drawable/mj_vrplayer_selector_main_bottom"
+		android:textSize="9sp"/>
+
+</LinearLayout>

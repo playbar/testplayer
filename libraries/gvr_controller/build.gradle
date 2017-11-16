@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('sdk-controller-1.20.0_mj_revision.aar'))

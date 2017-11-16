@@ -1,0 +1,2 @@
+configurations.create("default")
+artifacts.add("default", file('sdk-commonwidget-1.20.0.aar'))

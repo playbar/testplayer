@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    >
+    <RelativeLayout
+        android:id="@+id/layout_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <ImageButton
+            android:id="@+id/back"
+            style="@style/app_title_back_btn_style" />
+        <ImageView
+            android:id="@+id/imageview_closeall"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:padding="10dp"
+            android:src="@mipmap/local_video_perview_icon_close"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/back"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/title"
+            style="@style/app_title_text_style" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/layout_title"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#EFEFEF">
+        <TextView
+            android:id="@+id/textview_file_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:textColor="#999999"
+            android:layout_marginLeft="13dp"
+            />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1"/>
+        <ImageView
+            android:id="@+id/imageview_menu"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:src="@mipmap/local_video_menu"
+            android:layout_marginRight="13dp"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_smb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_top"
+        android:scrollbars="none"
+        android:divider="@null"
+        android:cacheColorHint="@color/transparent_bg"/>
+    
+
+    <com.baofeng.mj.smb.view.SMBSortMenuView
+        android:id="@+id/layout_sort_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_top"
+        android:background="#b3000000"/>
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/layout_top_navbar"/>
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            xmlns:ptr="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mPullToRefreshListView"
+            style="@style/listviewNoDividerStyle"
+            ptr:ptrAnimationStyle="flip"
+            ptr:ptrMode="pullDownFromTop"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/imageview_vr"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginRight="38dp"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:src="@mipmap/mj_vrplayer_button_invr_normal" />
+</RelativeLayout>

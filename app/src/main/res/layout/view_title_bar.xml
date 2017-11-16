@@ -1,0 +1,26 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageButton
+        android:id="@+id/back"
+        style="@style/app_title_back_btn_style" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/app_title_text_style" />
+    <TextView
+        android:id="@+id/tv_right"
+        style="@style/wrap_content_style"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/bar_text_size" />
+
+    <ImageButton
+        android:id="@+id/ib_right"
+        android:layout_width="@dimen/public_title_height"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null" />
+</merge>

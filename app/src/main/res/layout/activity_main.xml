@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <View style="@style/grayHorizontalLine" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorBottomTabBg">
+
+            <com.baofeng.mj.vrplayer.widget.MyFragmentTabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#B3000000"
+        android:gravity="center"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+        <ProgressBar
+            style="@style/mj_vrplayer_loading_style"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateBehavior="repeat"
+            android:indeterminateDuration="1000"
+            android:indeterminateOnly="true"/>
+    </LinearLayout>
+</RelativeLayout>

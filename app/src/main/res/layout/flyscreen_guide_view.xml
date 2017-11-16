@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <ImageView
+        android:id="@+id/iv_fly_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:scaleType="center" />
+
+    <!--第一次进入页面的简介-->
+    <RelativeLayout
+        android:id="@+id/rl_fly_screen_brife_introduction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_fly_screen"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_what_is_fly_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dip"
+            android:src="@mipmap/flyscreen_is_what" />
+
+        <TextView
+            android:id="@+id/tv_fly_screen_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_what_is_fly_screen"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="28dip"
+            android:text="@string/flyscreen_is_what"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/tv_fly_sreen_brief_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fly_screen_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="50dip"
+            android:layout_marginTop="20dip"
+            android:lineSpacingExtra="7dp"
+            android:gravity="center"
+            android:text="@string/flyscreen_brief_introduction"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/btn_text_size" />
+
+        <Button
+            android:id="@+id/btn_learn_use_fly_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fly_sreen_brief_introduction"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/shape_btn_blue_bg"
+            android:clickable="true"
+            android:paddingBottom="9dip"
+            android:paddingLeft="40dip"
+            android:paddingRight="40dip"
+            android:paddingTop="9dip"
+            android:text="@string/flyscreen_how_to_use"
+            android:textColor="@color/colorLightBlueText"
+            android:textSize="@dimen/btn_text_size" />
+
+        <TextView
+            android:id="@+id/tv_skip_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dip"
+            android:layout_marginTop="10dip"
+            android:background="@drawable/shape_btn_blue_bg"
+            android:padding="7dp"
+            android:text="@string/flyscreen_skip_guide"
+            android:textColor="@color/colorLightBlueText"
+            android:textSize="@dimen/content_text_size" />
+    </RelativeLayout>
+
+    <!--帮助页面-->
+    <RelativeLayout
+        android:id="@+id/ll_fly_screen_guide_step"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/iv_fly_screen"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_fly_screen_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tv_fly_screen_step"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dip" />
+
+        <TextView
+            android:id="@+id/tv_fly_screen_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dip"
+            android:text="@string/flyscreen_guide_step_1"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@+id/tv_fly_screen_step_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fly_screen_step"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dip"
+            android:text="@string/flyscreen_download_app"
+            android:textColor="@color/prompt_color"
+            android:textSize="@dimen/title_text_size" />
+
+        <TextView
+            android:id="@+id/tv_fly_screen_download_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fly_screen_step_desc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dip"
+            android:text="@string/flyscreen_download_address"
+            android:textColor="@color/gray_7f"
+            android:textSize="@dimen/content_text_size" />
+
+        <TextView
+            android:id="@+id/tv_fly_screen_download_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fly_screen_download_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dip"
+            android:text="@string/flyscreen_download_url"
+            android:textColor="@color/fly_screen_url_color"
+            android:textSize="@dimen/title_text_size" />
+
+        <Button
+            android:id="@+id/btn_fly_screen_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fly_screen_download_url"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dip"
+            android:background="@drawable/shape_btn_blue_bg"
+            android:paddingBottom="10dip"
+            android:paddingLeft="40dip"
+            android:paddingRight="40dip"
+            android:paddingTop="10dip"
+            android:text="@string/flyscreen_next_step"
+            android:textColor="@color/colorLightBlueText"
+            android:textSize="@dimen/btn_text_size" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_fly_screen_not_found"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="27dp"
+    android:visibility="gone">
+
+    <ImageView
+        android:id="@+id/fly_screen_not_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/flyscreen_not_found" />
+
+    <TextView
+        android:id="@+id/tv_no_device"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fly_screen_not_found"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:text="@string/flyscreen_device_not_found"
+        android:textColor="@color/prompt_color"
+        android:textSize="@dimen/btn_text_size" />
+
+    <TextView
+        android:id="@+id/tv_no_device_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_no_device"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:text="@string/flyscreen_please_confirm"
+        android:textColor="@color/prompt_color"
+        android:textSize="@dimen/btn_text_size" />
+
+    <TextView
+        android:id="@+id/tv_fly_screen_hint1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_fly_screen_hint2"
+        android:layout_below="@+id/tv_no_device_confirm"
+        android:layout_marginTop="7dip"
+        android:text="@string/flyscreen_computer_installed"
+        android:textColor="@color/prompt_color"
+        android:textSize="@dimen/btn_text_size" />
+
+    <TextView
+        android:id="@+id/tv_fly_screen_hint2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fly_screen_hint1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dip"
+        android:text="@string/flyscreen_in_same_lan"
+        android:textColor="@color/prompt_color"
+        android:textSize="@dimen/btn_text_size" />
+
+    <TextView
+        android:id="@+id/tv_rescan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_fly_screen_hint2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:background="@drawable/shape_btn_blue_bg"
+        android:paddingBottom="10dip"
+        android:paddingLeft="40dip"
+        android:paddingRight="40dip"
+        android:paddingTop="10dip"
+        android:text="@string/flyscreen_rescan"
+        android:textColor="@color/colorLightBlueText"
+        android:textSize="@dimen/btn_text_size" />
+
+    <TextView
+        android:id="@+id/tv_common_problem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="17dp"
+        android:drawableLeft="@mipmap/flyscreen_common_problem"
+        android:drawablePadding="7dp"
+        android:text="@string/flyscreen_common_problem"
+        android:textColor="@color/prompt_color"
+        android:textSize="@dimen/btn_text_size" />
+
+</RelativeLayout>

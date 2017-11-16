@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.baofeng.mj.vrplayer.widget.SlideLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_SlideLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/layout_top_title"/>
+
+    <LinearLayout
+        android:id="@+id/layout_parent_touch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mj_vrplayer_color_gray_bg"
+        android:layout_below="@id/layout_title"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textSize="14sp"
+            android:textColor="@color/mj_vrplayer_color_http_black"
+            android:text="@string/mj_vrplayer_ftp_msg"/>
+
+        <TextView
+            android:id="@+id/textview_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="14sp"
+            android:textColor="@color/mj_vrplayer_color_http_ip_blue"
+            />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:src="@mipmap/mj_vrplayer_upload_image_ftp"
+            android:layout_marginTop="40dp"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_weight="8"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/ftpName"
+                android:singleLine="true"
+                android:ellipsize="middle"
+                android:textColor="#ff333333"
+                android:text="无传输文件"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:gravity="right|center_vertical"
+                android:layout_weight="3"
+                android:textColor="#ffcccccc"
+                android:singleLine="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/ftpSendSize"
+                android:text="0M/0M"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageview_vr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="38dp"
+        android:layout_marginRight="38dp"
+        android:src="@mipmap/mj_vrplayer_button_invr_normal"/>
+</com.baofeng.mj.vrplayer.widget.SlideLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/video_player_control_bar_top_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/video_player_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/nav_icon_back_white" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_video_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/video_player_back"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:text="遗落战境之魔兽入侵"
+        android:textColor="@color/normal_text_color"
+        android:textSize="@dimen/title_text_size" />
+
+
+    <ImageButton
+        android:id="@+id/imagebtn_bar_top_in_vr"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:src="@drawable/nav_icon_invr_home" />
+
+    <RelativeLayout
+        android:id="@+id/bluetooth_connect_flag_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_toLeftOf="@+id/imagebtn_bar_top_in_vr">
+
+        <ImageView
+            android:id="@+id/iv_bluetooth_connect_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="3dp"
+            android:src="@drawable/bluetooth_disconneced_img" />
+
+        <TextView
+            android:id="@+id/tv_bluetooth_connect_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/iv_bluetooth_connect_flag"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:text="@string/bluetooth_control_disconneced"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/label_text_size" />
+    </RelativeLayout>
+
+</RelativeLayout>

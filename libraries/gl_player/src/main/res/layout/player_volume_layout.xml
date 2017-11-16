@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rl_remote_player_volume_left_layout"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/corner_remote_player_controller_bg"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_remote_player_left_volume"
+            android:layout_width="14.3dp"
+            android:layout_height="13.3dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/remote_controller_volume" />
+
+        <ProgressBar
+            android:id="@+id/pb_remote_player_left_volume"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="47dp"
+            android:layout_height="3dp"
+            android:layout_below="@id/iv_remote_player_left_volume"
+            android:layout_marginTop="10dp"
+            android:indeterminateOnly="false"
+            android:layerType="software"
+            android:layout_centerHorizontal="true"
+            android:max="100"
+            android:progress="40"
+            android:progressDrawable="@drawable/remote_volume_progressbar_bg" />
+    </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rl_remote_player_volume_right_layout"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_centerInParent="true"
+        android:background="@drawable/corner_remote_player_controller_bg"
+        android:gravity="center"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_remote_player_right_volume"
+            android:layout_width="14.3dp"
+            android:layout_height="13.3dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/remote_controller_volume" />
+
+        <ProgressBar
+            android:id="@+id/pb_remote_player_right_volume"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="47dp"
+            android:layout_height="3dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/iv_remote_player_right_volume"
+            android:layout_marginTop="10dp"
+            android:indeterminateOnly="false"
+            android:layerType="software"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/remote_volume_progressbar_bg" />
+    </RelativeLayout>
+        </LinearLayout>
+
+</LinearLayout>

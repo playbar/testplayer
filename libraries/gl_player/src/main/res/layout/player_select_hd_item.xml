@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:minHeight="46dp">
+
+    <TextView
+        android:id="@+id/hd_item_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="13.5dp"
+        android:layout_marginRight="13.5dp"
+        android:gravity="center"
+        android:background="@null"
+        android:maxLines="1"
+        android:ellipsize="middle"
+        android:textColor="@color/play_select_grid_item_text_normal"
+        android:textSize="12sp"
+        android:lineSpacingExtra="5dp"/>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="#1Affffff"
+        android:layout_marginLeft="13.5dp"
+        android:layout_marginRight="13.5dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

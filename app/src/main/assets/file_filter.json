@@ -1,0 +1,139 @@
+{
+	"filterVersion" : 8,
+	"ignoreDirs" : 
+	[
+		{
+			"parentDir" : null,
+			"targetDir" : "OpenMaster",
+			"maxLength" : null, 
+			"exclude"   : null		
+		},
+		{
+			"targetDir" : "DuoKan"
+		},
+		{
+			"parentDir" : "baidu",
+			"exclude"   : ["flyflow"]
+		},
+		{
+			"parentDir" : "MicroMsg",			  
+			"targetDir" : null,  
+			"maxLength" : 31, 
+			"exclude"   : null             
+		},
+		{
+			"parentDir" : "MicroMsg",
+			"targetDir" : "crash"
+		},
+		{
+			"parentDir" : "QQBrowser",			  
+			"targetDir" : "plugins",    
+			"maxLength" : null, 
+			"exclude"   : null            
+		},
+		{
+			"parentDir" : null,			  
+			"targetDir" : "cache",    
+			"maxLength" : null, 
+			"exclude"   : ["disk_file_cache", "360VideoCache", "#cc"]            
+		},
+		{
+			"parentDir" : null,			  
+			"targetDir" : "thumb",    
+			"maxLength" : null, 
+			"exclude"   : null            
+		},
+		{
+			"parentDir" : null,			  
+			"targetDir" : "log",    
+			"maxLength" : null, 
+			"exclude"   : ["#cc"]            
+		},
+		{
+			"parentDir" : "data",			  
+			"targetDir" : "data",    
+			"maxLength" : null, 
+			"exclude"   : null            
+		},
+	  	{
+			"parentDir" : "Android",
+			"targetDir" : "data",
+			"maxLength" : null,
+			"exclude"   : null
+	  	},
+		{
+			"parentDir" : "mobileqq",			  
+			"targetDir" : "head",    
+			"maxLength" : null,
+			"exclude"   : null            
+		},
+		{
+			"parentDir" : "wangxin",			  
+			"targetDir" : "breakpad",    
+			"maxLength" : null,
+			"exclude"   : null            
+		},
+	  	{
+			"targetDir" : "360Browser"//360
+	  	},
+	  	{
+			"targetDir" : "tencent"//腾讯文件夹
+	  	},
+	  	{
+			"targetDir" : "com.qiyi.video"//爱奇艺包名
+	  	},
+	  	{
+			"targetDir" : "com.tencent.qqlive"//腾讯视频包名
+	  	},
+	  	{
+			"targetDir" : "com.tencent.mm"//微信包名
+	  	},
+	  	{
+			"targetDir" : "mojing"//mojing文件夹
+	  	},
+	  	{
+			"targetDir" : "CrystalExpressCN"
+	  	}
+	],
+	"ignoreFiles" : 
+	[
+		{
+			"fileName"          : null,	
+		  	"fileCategory"      : 2,						               
+			"fileExt"           : null,
+			"fileMinSize"       : 10240,
+			"fileMaxSize"       : null,
+			"fileNameMaxLength" : null,
+			
+			"excludeDir"	     : ["WeiXin", "#cc"]
+		},
+		{
+			"fileCategory"      : 3,			
+			"targetDir"			:["MicroMsg/WeiXin"]
+		},
+		{
+			"fileCategory"      : 4,
+			"fileMinSize"       : 102400,		
+			"excludeDir"		: ["#cc"]
+		},
+		{
+			"fileCategory"      : 3,
+			"fileMinSize"       : 102400,		
+			"excludeDir"	     : ["shvdownload/video/tempVideo", "UCDownloads", "youku/offlinedata", "#cc"]
+		},
+		{
+			"fileName"          :["log","cache","thumb","crash","debug","bad_","de_"],
+			"fileCategory"      : 5,
+			"excludeDir"	     : ["#cc"]
+		},
+		{
+			"fileExt"           : ["txt"],
+			"fileMinSize"       : 1024,
+			"excludeDir"	     : ["#cc","/"]
+		},
+	  	{
+			"fileCategory"      : 3,
+			"fileMinSize"       : 1024000
+		}
+	]
+}

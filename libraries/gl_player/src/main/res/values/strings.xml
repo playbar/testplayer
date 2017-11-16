@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MjVRPlayer</string>
+
+    <!--在线播放预览 -->
+    <string name="player_load_failed">加载失败，点击重新加载</string>
+    <string name="player_reload">重新加载</string>
+    <string name="player_no_wifi">&#160;&#160;&#160;&#160;您当前为非Wi-Fi网络\n是否使用手机流量进行播放</string>
+    <string name="player_network_exception">网络异常，请检查网络设置</string>
+    <string name="player_play_continue">继续播放</string>
+    <string name="player_chose_dialog_title">请选择一种播放模式</string>
+    <string name="player_mode_normal">极简模式</string>
+    <string name="player_mode_vr">沉浸模式</string>
+    <string name="player_chose_dialog_remember1"><Data><![CDATA[<font color="#666666"><b>记住该选择</b></font><font color="#999999"><b>（记住后在“设置”中可以自行切换）</b></font>]]></Data></string>
+    <string name="player_chose_dialog_remember2"></string>
+    <string name="player_exception_tips">网络状态不佳！建议您“暂停”\n等待缓冲或直接下载观看</string>
+    <string name="gl_player_locked">当前为锁屏模式，点击这里解锁</string>
+    <string name="gl_player_unlocked">您已关闭锁屏模式，点击这里锁屏</string>
+    <string name="player_lock_tips">你当前的手机播放高清视频可能会导致黑屏或卡顿，是否继续播放该视频?</string>
+    <string name="bluetooth_control_disconneced">手柄未连接</string>
+
+    <string name="player_single_screen">单屏幕</string>
+    <string name="player_double_screen">双屏幕</string>
+    <string name="player_buy_glasses">购买眼镜</string>
+</resources>

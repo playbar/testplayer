@@ -1,0 +1,16 @@
+include ':app'
+include ':libraries:gvr_common',
+        ':libraries:gvr_base',
+        ':libraries:gvr_controller',
+        ':libraries:gvr_panowidget',
+        ':libraries:gvr_commonwidget'
+include ':libraries:ota_library',
+        ':libraries:ota_dfu_library',
+        ':libraries:mjgvrservice_lib',
+        ':libraries:mjgvrcontrller_lib',
+        ':libraries:mjviewcore_lib',
+        ':libraries:mojingsdk',
+        ':libraries:mojingscan_lib',
+        ':libraries:gl_play_lib',
+        ':libraries:gl_player'
+include 'unitylibrary'

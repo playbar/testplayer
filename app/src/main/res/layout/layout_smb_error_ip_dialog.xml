@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/dialog_white_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/mj_share_smb_add_device_link_error"
+        android:textColor="@color/content_color"
+        android:textSize="14sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:text="@string/mj_share_smb_add_device_link_please_true"
+        android:textColor="@color/content_color"
+        android:textSize="12sp" />
+
+    <include layout="@layout/view_line_divider_withour_margin"/>
+
+    <TextView
+        android:id="@+id/textview_ok"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/mj_share_smb_add_device_link_ok"
+        android:textColor="@color/content_color"
+        android:textSize="14sp" />
+
+</LinearLayout>

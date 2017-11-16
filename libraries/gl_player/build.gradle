@@ -1,0 +1,89 @@
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'assets/MojingSDK/GlassesConfig.json'
+        exclude 'assets/MojingSDK/InputMap_mojing_default.json'
+        exclude 'assets/MojingSDK/InputMap_mojing_default_for_unreal.json'
+    }
+
+    defaultConfig {
+        //   applicationId "com.mojing.vrplayer"
+        minSdkVersion 19
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+
+        ndk {
+            abiFilter("armeabi-v7a")
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main {
+            assets.srcDirs = ['assets']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories {
+        flatDir {
+            //dirs '../libraries/applib/libs'
+          //  dirs '../app/libs'
+            dirs 'libs'
+        }
+    }
+
+
+}
+
+dependencies {
+    // compile fileTree(include: ['**.*'], dir: 'libs')
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+//    testCompile 'junit:junit:4.12'
+//    compile(name: 'sdk-base-1.20.0', ext: 'aar')
+//    compile(name: 'sdk-common-1.20.0_mj_revision', ext: 'aar')
+//    compile(name: 'sdk-controller-1.20.0', ext: 'aar')
+//    compile(name: 'sdk-commonwidget-1.20.0', ext: 'aar')
+//    compile(name: 'sdk-panowidget-1.20.0', ext: 'aar')
+//    compile(name: 'MjGvrService', ext: 'aar')
+//    compile files('libs/BFCOMMON.jar')
+    //  compile project(':libraries:applib')
+
+//    compile(name: 'MJViewCore-release', ext: 'aar')
+//    compile(name: 'MjGvrService', ext: 'aar')
+    compile project(':libraries:mjgvrservice_lib')
+    compile project(':libraries:mjgvrcontrller_lib')
+    compile project(':libraries:ota_library')
+    compile project(':libraries:mjviewcore_lib')
+    compile project(':libraries:gvr_common')
+    compile project(':libraries:gvr_base')
+    compile project(':libraries:gvr_panowidget')
+    compile project(':libraries:gvr_commonwidget')
+    compile project(':libraries:gvr_controller')
+    compile project(':libraries:mojingsdk')
+    compile project(':libraries:gl_play_lib')
+
+    compile files('libs/fastjson-1.2.3.jar')
+    compile files('libs/fast-sdk.jar')
+    compile files('libs/glide-3.7.0.jar')
+    compile files('libs/gson-2.2.2.jar')
+//    compile files('libs/MoJingScan.jar')
+//    compile files('libs/MojingSDK.jar')
+//    compile project(':libraries:MJViewCore')
+//    compile project(':libraries:FrameworkForMJ')
+//    compile files('libs/fastjson-1.2.3.jar')
+//    compile files('libs/gson-2.2.2.jar')
+}

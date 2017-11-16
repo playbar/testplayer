@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/smb_login_dialog_bg">
+
+    <TextView
+        android:id="@+id/smbLogin_textview_title_linkto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mj_share_smb_login_title_linkto"
+        android:textColor="@color/smb_login_title_black"
+        android:textSize="13sp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="15dp"/>
+    <TextView
+        android:id="@+id/smbLogin_textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/smbLogin_textview_title_linkto"
+        android:textColor="@color/smb_login_title_black"
+        android:textSize="13sp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"/>
+    <RelativeLayout
+        android:id="@+id/smbLogin_layout_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:layout_below="@id/smbLogin_textview_title"
+        android:background="@drawable/smb_login_edittext_background">
+
+        <TextView
+            android:id="@+id/textview_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:text="@string/mj_share_smb_login_edit_name"/>
+        <EditText
+            android:id="@+id/smbLogin_edit_name"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/textview_name"
+            android:background="@color/transparent_bg"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:padding="5dp"
+            android:textSize="13sp"
+            android:singleLine="true"
+            android:textColor="#000000"/>
+        <ImageView
+            android:id="@+id/imageview_username_delete"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/smb_login_delete"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/smbLogin_layout_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:layout_below="@id/smbLogin_layout_name"
+        android:background="@drawable/smb_login_edittext_background">
+
+        <TextView
+            android:id="@+id/textview_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"
+            android:textSize="13sp"
+            android:text="@string/mj_share_smb_login_edit_password"/>
+        <EditText
+            android:id="@+id/smbLogin_edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/textview_password"
+            android:layout_marginLeft="20dp"
+            android:background="@color/transparent_bg"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="#000000"
+            android:inputType="textPassword"
+            android:textSize="13sp" />
+        <ImageView
+            android:id="@+id/imageview_password_delete"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/smb_login_delete"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/smbLogin_textview_login_help"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/smbLogin_layout_password"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/mj_share_smb_login_help"
+        android:textColor="#aaaaaa"
+        android:textSize="11sp"
+        />
+
+    <TextView
+        android:id="@+id/smbLogin_textview_login_guest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/smbLogin_layout_password"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentRight="true"
+        android:text="@string/mj_share_smb_login_guest"
+        android:textColor="#7A4FC9"
+        android:textSize="11sp"
+        />
+
+    <View
+        android:id="@+id/view_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/divider_color"
+        android:layout_below="@id/smbLogin_textview_login_help"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/view_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/smbLogin_button_close"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mj_share_smb_login_cancle"
+            android:textColor="@color/content_color"
+            android:textSize="14sp" />
+
+        <include layout="@layout/view_vertical_line"/>
+
+        <TextView
+            android:id="@+id/smbLogin_button_ok"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/mj_share_smb_login_ok"
+            android:textColor="@color/smb_login_button_purple"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>
