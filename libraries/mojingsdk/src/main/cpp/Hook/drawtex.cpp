@@ -265,7 +265,7 @@ int InitTex( UserData *userData, int index)
     userData->textureId = createTexture ();
     CheckGLError("InitTex");
 
-    InitData();
+//    InitData();
 
     return true;
 }

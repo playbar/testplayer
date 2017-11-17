@@ -24,8 +24,6 @@ android {
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
-            assets.srcDirs = ['assets']
-            jniLibs.srcDirs = ['libs']
         }
 
         // Move the build types to build-types/<type>
