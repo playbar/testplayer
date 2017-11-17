@@ -44,6 +44,7 @@ extern int gvrmajorversion;
 extern int gvrminorversion;
 static bool gmultiview_enabled = false;
 static int gvpwidth = 0;
+static gvr_swap_chain* gSwapChain = NULL;
 
 bool	HookGVRTools::m_bSVREnable = false;
 
@@ -56,6 +57,9 @@ FP_gvr_get_head_space_from_start_space_rotation HookGVRTools::m_fp_gvr_get_head_
 FP_gvr_reset_tracking HookGVRTools::m_fp_gvr_reset_tracking = NULL;
 FP_gvr_recenter_tracking HookGVRTools::m_fp_gvr_recenter_tracking = NULL;
 FP_gvr_frame_submit HookGVRTools::m_fp_gvr_frame_submit = NULL;
+FP_gvr_swap_chain_create HookGVRTools::m_fp_gvr_swap_chain_create = NULL;
+FP_gvr_swap_chain_get_buffer_count HookGVRTools::m_fp_gvr_swap_chain_get_buffer_count = NULL;
+FP_gvr_swap_chain_acquire_frame HookGVRTools::m_fp_gvr_swap_chain_acquire_frame = NULL;
 FP_gvr_get_viewer_model HookGVRTools::m_fp_gvr_get_viewer_model = NULL;
 FP_gvr_get_viewer_vendor HookGVRTools::m_fp_gvr_get_viewer_vendor = NULL;
 FP_gvr_get_version_string HookGVRTools::m_fp_gvr_get_version_string = NULL;
@@ -91,7 +95,7 @@ bool HookGVRTools::Init()
 	bool bRet = false;
 	if (LoadGVR())
 	{
-		HookParamet HP[7];
+		HookParamet HP[9];
 		HOOK_PARAMET(HP[0], gvr_get_head_space_from_start_space_rotation);
 		HOOK_PARAMET(HP[1], gvr_reset_tracking);
 		HOOK_PARAMET(HP[2], gvr_recenter_tracking);
@@ -99,14 +103,17 @@ bool HookGVRTools::Init()
 		HOOK_PARAMET(HP[4], gvr_initialize_gl);
 		HOOK_PARAMET(HP[5], gvr_is_feature_supported);
 		HOOK_PARAMET(HP[6], gvr_render_reprojection_thread);
+        HOOK_PARAMET(HP[7], gvr_swap_chain_create);
+        HOOK_PARAMET(HP[8], gvr_swap_chain_acquire_frame);
 
-		if (HookBase::HookToFunctions(m_hGVR, HP, 7) &&
+		if (HookBase::HookToFunctions(m_hGVR, HP, 9) &&
 			NULL != (GET_DLL_FUNCION(m_hGVR, gvr_get_viewer_model)) &&
 			NULL != (GET_DLL_FUNCION(m_hGVR, gvr_get_viewer_vendor)) &&
 			NULL != (GET_DLL_FUNCION(m_hGVR, gvr_get_version_string))&&
             NULL != (GET_DLL_FUNCION(m_hGVR, gvr_get_version)) &&
 			NULL != (GET_DLL_FUNCION(m_hGVR, gvr_frame_bind_buffer))
 			&& NULL != (GET_DLL_FUNCION(m_hGVR, gvr_frame_unbind))
+			&& NULL != (GET_DLL_FUNCION(m_hGVR, gvr_swap_chain_get_buffer_count))
 			&& NULL != (GET_DLL_FUNCION(m_hGVR, gvr_get_maximum_effective_render_target_size)))
 		{
 			// Get Function pointer HOOKed
@@ -117,6 +124,8 @@ bool HookGVRTools::Init()
 			m_fp_gvr_initialize_gl = (FP_gvr_initialize_gl)HP[4].fpRealFunction;
 			m_fp_gvr_is_feature_supported = (FP_gvr_is_feature_supported)HP[5].fpRealFunction;
             m_fp_gvr_render_reprojection_thread = (FP_gvr_render_reprojection_thread)HP[6].fpRealFunction;
+            m_fp_gvr_swap_chain_create = (FP_gvr_swap_chain_create)HP[7].fpRealFunction;
+            m_fp_gvr_swap_chain_acquire_frame = (FP_gvr_swap_chain_acquire_frame)HP[8].fpRealFunction;
 //			m_fp_gvr_frame_unbind = (FP_gvr_frame_unbind)HP[6].fpRealFunction;
 
 			String sEngenVersion = "GVR ";
@@ -473,21 +482,26 @@ void HookGVRTools::HOOK_gvr_frame_submit(gvr_frame **frame, const gvr_buffer_vie
 	m_fp_gvr_frame_unbind(*frame);
 #else
 
-	glViewport(0, 0, gvpwidth, gvpwidth );
-	m_fp_gvr_frame_bind_buffer(*frame, 0);
+	int32_t count = m_fp_gvr_swap_chain_get_buffer_count(gSwapChain);
+	LOGE("tid=%d, framecount=%d", gettid(), count);
+    glViewport(0, 0, gvpwidth, gvpwidth );
+    for( int i = 0; i < count; ++i) {
+        m_fp_gvr_frame_bind_buffer(*frame, i);
 //    glClearColor ( 1.0f, 1.0f, 0.0f, 0.0f );
 //    glClear ( GL_COLOR_BUFFER_BIT );
-	DrawTex(&gUserData);
-	m_fp_gvr_frame_unbind(*frame);
+        DrawTex(&gUserData);
+        m_fp_gvr_frame_unbind(*frame);
+    }
 
-	m_fp_gvr_frame_bind_buffer(*frame, 1);
-//	glViewport(0, 0, 960, 1080);
-//    glClearColor ( 1.0f, 1.0f, 0.0f, 0.0f );
-//    glClear ( GL_COLOR_BUFFER_BIT );
-	DrawTex(&gUserData);
-	m_fp_gvr_frame_unbind(*frame);
+//    m_fp_gvr_frame_bind_buffer(*frame, 1);
+////	glViewport(0, 0, 960, 1080);
+////    glClearColor ( 1.0f, 1.0f, 0.0f, 0.0f );
+////    glClear ( GL_COLOR_BUFFER_BIT );
+//    DrawTex(&gUserData);
+//    m_fp_gvr_frame_unbind(*frame);
 
 #endif
+    LOGE("glbindbuffer end, vboID=%d, iboID=%d", gUserData.vboID, gUserData.textureId);
 
     rendertid = gettid();
 	if (m_fp_gvr_frame_submit)
@@ -511,6 +525,27 @@ void HookGVRTools::HOOK_gvr_frame_submit(gvr_frame **frame, const gvr_buffer_vie
 
 }
 
+gvr_swap_chain *HookGVRTools::HOOK_gvr_swap_chain_create(gvr_context* gvr,
+                                       const gvr_buffer_spec** buffers,
+                                       int32_t count)
+{
+	LOGE("HOOK_gvr_swap_chain_create, tid=%d, count=%d", gettid(), count);
+	gSwapChain = m_fp_gvr_swap_chain_create(gvr, buffers, count);
+	return gSwapChain;
+}
+
+int32_t HookGVRTools::HOOK_gvr_swap_chain_get_buffer_count(const gvr_swap_chain* swap_chain)
+{
+    int32_t count = m_fp_gvr_swap_chain_get_buffer_count(swap_chain);
+    LOGE("HOOK_gvr_swap_chain_get_buffer_count, tid=%d, count=%d", gettid(), count);
+    return count;
+}
+
+gvr_frame *HookGVRTools::HOOK_gvr_swap_chain_acquire_frame(gvr_swap_chain* swap_chain)
+{
+	gSwapChain = swap_chain;
+	return m_fp_gvr_swap_chain_acquire_frame(swap_chain);
+}
 
 //int HookGVRTools::HOOK_gvr_on_surface_created_reprojection_thread(const gvr_context *gvr)
 //{
