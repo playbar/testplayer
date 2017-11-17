@@ -87,6 +87,12 @@ typedef int32_t (*FP_gvr_swap_chain_get_buffer_count)(const gvr_swap_chain* swap
 #define FN_gvr_swap_chain_acquire_frame "gvr_swap_chain_acquire_frame"
 typedef gvr_frame* (*FP_gvr_swap_chain_acquire_frame)(gvr_swap_chain* swap_chain);
 
+#define FN_gvr_buffer_viewport_list_create "gvr_buffer_viewport_list_create"
+typedef gvr_buffer_viewport_list* (*FP_gvr_buffer_viewport_list_create)(const gvr_context* gvr);
+
+#define FN_gvr_buffer_viewport_list_destroy "gvr_buffer_viewport_list_destroy"
+typedef void (*FP_gvr_buffer_viewport_list_destroy)(gvr_buffer_viewport_list** viewport_list);
+
 #define  USING_SVR_SENSOR 0
 class HookGVRTools
 {
@@ -114,6 +120,9 @@ private:
 										   int32_t count);
 	static int32_t HOOK_gvr_swap_chain_get_buffer_count(const gvr_swap_chain* swap_chain);
     static gvr_frame *HOOK_gvr_swap_chain_acquire_frame(gvr_swap_chain* swap_chain);
+    static gvr_buffer_viewport_list *HOOK_gvr_buffer_viewport_list_create(const gvr_context* gvr);
+    static void HOOK_gvr_buffer_viewport_list_destroy(gvr_buffer_viewport_list** viewport_list);
+
 //	static int HOOK_gvr_on_surface_created_reprojection_thread(const gvr_context *gvr);
 	static int HOOK_gvr_render_reprojection_thread(const gvr_context *gvr);
 	static void HOOK_gvr_initialize_gl(gvr_context* gvr);
@@ -128,6 +137,8 @@ private:
 	static FP_gvr_swap_chain_create m_fp_gvr_swap_chain_create;
 	static FP_gvr_swap_chain_get_buffer_count m_fp_gvr_swap_chain_get_buffer_count;
     static FP_gvr_swap_chain_acquire_frame m_fp_gvr_swap_chain_acquire_frame;
+    static FP_gvr_buffer_viewport_list_create m_fp_gvr_buffer_viewport_list_create;
+    static FP_gvr_buffer_viewport_list_destroy m_fp_gvr_buffer_viewport_list_destroy;
 	static FP_gvr_reset_tracking m_fp_gvr_reset_tracking;// Deprecated
 	static FP_gvr_recenter_tracking m_fp_gvr_recenter_tracking;
 

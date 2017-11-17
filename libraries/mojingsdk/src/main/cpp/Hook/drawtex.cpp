@@ -1,6 +1,7 @@
 #include <malloc.h>
 #include <cstdlib>
 #include <android/log.h>
+#include <EGL/egl.h>
 #include "drawtex.h"
 
 #define LOG_TAG "drawtex"
@@ -9,6 +10,10 @@
 #define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
 
 UserData gUserData = {0};
+
+EGLContext gShareContext = 0;
+EGLDisplay gDisplay = 0;
+EGLSurface gAuxSurface = 0;
 
 static void CheckGLError(const char* label) {
     int gl_error = glGetError();
@@ -63,6 +68,50 @@ GLuint  esLoadShader ( GLenum type, const char *shaderSrc )
 
 }
 
+
+
+void createSharedContext(){
+    EGLint contextAttribs[] = { EGL_CONTEXT_CLIENT_VERSION, 3, EGL_NONE };
+    EGLint numConfigs = 0;
+    EGLConfig config;
+
+    const EGLint attribList[] = {
+            EGL_SURFACE_TYPE, EGL_PBUFFER_BIT,
+            EGL_BLUE_SIZE, 8,
+            EGL_GREEN_SIZE, 8,
+            EGL_RED_SIZE, 8,
+            EGL_ALPHA_SIZE, 8,
+            EGL_RENDERABLE_TYPE, 64,
+            EGL_DEPTH_SIZE, 0,
+            EGL_STENCIL_SIZE, 0,
+            EGL_NONE
+    };
+
+    EGLint pbufferAttribs[] = {
+            EGL_WIDTH, 1,
+            EGL_HEIGHT, 1,
+            EGL_TEXTURE_TARGET, EGL_NO_TEXTURE,
+            EGL_TEXTURE_FORMAT, EGL_NO_TEXTURE,
+            EGL_NONE
+    };
+
+    // Choose config
+    EGLDisplay display = eglGetCurrentDisplay( );
+    EGLContext context = eglGetCurrentContext();
+    if ( !eglChooseConfig ( display, attribList, &config, 1, &numConfigs ) )
+    {
+        return;
+    }
+
+    gAuxSurface = eglCreatePbufferSurface(display, config, pbufferAttribs);
+    if(gAuxSurface == NULL) {
+        return;
+    }
+
+    gShareContext = eglCreateContext( display, config, context, contextAttribs );
+    return;
+
+}
 
 //
 ///
@@ -205,11 +254,19 @@ void InitData()
 //
 int InitTex( UserData *userData, int index)
 {
-    if( userData->programObject != 0 )
-    {
-        return true;
-//        UninitTex();
-    }
+//    if( userData->programObject != 0 )
+//    {
+////        eglMakeCurrent( gDisplay, gAuxSurface, gAuxSurface, gShareContext );
+//        return true;
+////        UninitTex();
+//    }
+
+    EGLContext curContext = eglGetCurrentContext();
+    EGLDisplay curDisplay = eglGetCurrentDisplay();
+    EGLSurface curSurfaceRead = eglGetCurrentSurface(EGL_READ);
+    EGLSurface curSurfaceDraw = eglGetCurrentSurface(EGL_DRAW);
+    createSharedContext();
+    eglMakeCurrent( gDisplay, gAuxSurface, gAuxSurface, gShareContext );
     char * vShaderStr[] = {
             R"glsl(#version 300 es
                     layout(location = 0) in vec4 a_position;
@@ -272,6 +329,8 @@ int InitTex( UserData *userData, int index)
 
     InitData();
 
+    eglMakeCurrent(curDisplay, curSurfaceDraw, curSurfaceRead, curContext);
+
     return true;
 }
 
@@ -283,6 +342,7 @@ void UninitTex()
     glDeleteProgram ( gUserData.programObject );
     gUserData.samplerLoc = 0;
     gUserData.programObject = 0;
+    CheckGLError("UninitTex");
 }
 
 
@@ -330,6 +390,8 @@ void DrawTex( UserData *userData)
 //    glDrawElements ( GL_TRIANGLES, 6, GL_UNSIGNED_SHORT, indices );
 
     glBindBuffer(GL_ARRAY_BUFFER, gUserData.vboID);
+//    glEnableVertexAttribArray ( 0 );
+//    glEnableVertexAttribArray ( 1 );
     glVertexAttribPointer ( 0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof ( GLfloat ), 0 );
     glVertexAttribPointer ( 1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof ( GLfloat ), (void*)(3 * sizeof(GLfloat)) );
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, gUserData.iboID);

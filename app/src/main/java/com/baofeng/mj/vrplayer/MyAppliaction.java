@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.baofeng.mj.vrplayer.bean.LocalVideoBean;
 import com.baofeng.mj.vrplayer.business.FileUploadBusiness;
+import com.baofeng.mojing.MojingSDK;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -22,6 +23,7 @@ public class MyAppliaction extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        MojingSDK.mContext = this.getApplicationContext();
         instance=this;
     }
     private FileUploadBusiness mFileUploadBusiness;
