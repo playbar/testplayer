@@ -101,7 +101,7 @@ public class GoogleVR {
 
     public void resume() {
         this.mGvrLayout.onResume();
-        MojingSDK.hookFun(true);
+        MojingSDK.enableShowTip(true);
         Log.e("hook", "GoogleVR resume");
     }
 

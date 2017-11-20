@@ -623,9 +623,8 @@ public class MojingSDK {
         return isDDPhone()?1:0;
     }
 
-    public static void hookFun(boolean bunityapp) {
-        nativeEnableShowTip(bunityapp);
-        VrFuncInit(bunityapp);
+    public static void hookFun() {
+        VrFuncInit(isDDPhone());
         if(!isDDPhone()) {
             ReprojFuncInit();
         }

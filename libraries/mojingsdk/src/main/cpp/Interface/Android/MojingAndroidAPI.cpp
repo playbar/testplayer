@@ -160,18 +160,14 @@ JNIEXPORT void JNICALL Java_com_baofeng_mojing_MojingSDK_Log(JNIEnv *jEnv, jclas
 
 JNIEXPORT void JNICALL Java_com_baofeng_mojing_MojingSDK_VrFuncInit(JNIEnv *jEnv, jclass, jboolean isdd)
 {
-	if( gEnableHook) {
-		HookGVRTools::Init();
-		hookGLFun();
-	}
+	HookGVRTools::Init();
+	hookGLFun();
 //    startHookThread(isdd);
 }
 
 JNIEXPORT void JNICALL Java_com_baofeng_mojing_MojingSDK_ReprojFuncInit(JNIEnv *jEnv, jclass)
 {
-	if(gEnableHook) {
-		hookEglGetProcAddress();
-	}
+	hookEglGetProcAddress();
 }
 
 JNIEXPORT void JNICALL Java_com_baofeng_mojing_MojingSDK_NativeUnityFuncInit(JNIEnv *jEnv, jclass)
