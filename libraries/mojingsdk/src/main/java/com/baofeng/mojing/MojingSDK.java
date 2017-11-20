@@ -589,6 +589,8 @@ public class MojingSDK {
 
     public static native void NativeUnityFuncInit();
 
+    public static native void nativeEnableShowTip(boolean var0);
+
     private static native void Log(int var0, String var1, String var2, int var3);
 
     private static void Log(int logLevel, String sInfo) {
@@ -621,12 +623,17 @@ public class MojingSDK {
         return isDDPhone()?1:0;
     }
 
-    public static void hookFun() {
-        VrFuncInit(isDDPhone());
+    public static void hookFun(boolean bunityapp) {
+        nativeEnableShowTip(bunityapp);
+        VrFuncInit(bunityapp);
         if(!isDDPhone()) {
             ReprojFuncInit();
         }
+    }
 
+    public static void enableShowTip(boolean bable)
+    {
+        nativeEnableShowTip(bable);
     }
 
     public static void hookUnityFun() {

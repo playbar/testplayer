@@ -9,6 +9,8 @@ import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.view.SurfaceView;
+
+import com.baofeng.mojing.MojingSDK;
 import com.google.vr.ndk.base.AndroidCompat;
 import com.google.vr.ndk.base.GvrApi;
 import com.google.vr.ndk.base.GvrLayout;
@@ -93,10 +95,14 @@ public class GoogleVR {
 
     public void pause() {
         this.mGvrLayout.onPause();
+        MojingSDK.enableShowTip(false);
+        Log.e("hook", "GoogleVR pause");
     }
 
     public void resume() {
         this.mGvrLayout.onResume();
+        MojingSDK.hookFun(true);
+        Log.e("hook", "GoogleVR resume");
     }
 
     public boolean enable(boolean enabled) {

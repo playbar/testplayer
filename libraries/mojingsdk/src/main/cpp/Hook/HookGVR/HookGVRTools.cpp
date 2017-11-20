@@ -42,6 +42,7 @@ CSVRApi HookGVRTools::m_SVRApi;
 
 extern int gvrmajorversion;
 extern int gvrminorversion;
+extern bool gEnableHook;
 static bool gmultiview_enabled = false;
 static int gvpwidth = 0;
 static gvr_swap_chain* gSwapChain = NULL;
@@ -488,17 +489,18 @@ void HookGVRTools::HOOK_gvr_frame_submit(gvr_frame **frame, const gvr_buffer_vie
     glClear ( GL_COLOR_BUFFER_BIT );
 	m_fp_gvr_frame_unbind(*frame);
 #else
-
-	int32_t count = m_fp_gvr_swap_chain_get_buffer_count(gSwapChain);
+	if( gEnableHook) {
+		int32_t count = m_fp_gvr_swap_chain_get_buffer_count(gSwapChain);
 //	LOGE("tid=%d, framecount=%d", gettid(), count);
-    glViewport(0, 0, gvpwidth, gvpwidth );
-    for( int i = 0; i < count; ++i) {
-        m_fp_gvr_frame_bind_buffer(*frame, i);
+		glViewport(0, 0, gvpwidth, gvpwidth);
+		for (int i = 0; i < count; ++i) {
+			m_fp_gvr_frame_bind_buffer(*frame, i);
 //    glClearColor ( 1.0f, 1.0f, 0.0f, 0.0f );
 //    glClear ( GL_COLOR_BUFFER_BIT );
-        DrawTex(&gUserData);
-        m_fp_gvr_frame_unbind(*frame);
-    }
+			DrawTex(&gUserData);
+			m_fp_gvr_frame_unbind(*frame);
+		}
+	}
 
 //    m_fp_gvr_frame_bind_buffer(*frame, 1);
 ////	glViewport(0, 0, 960, 1080);
@@ -610,12 +612,15 @@ int HookGVRTools::HOOK_gvr_render_reprojection_thread(const gvr_context *gvr)
     return re;
 }
 
+
 void HookGVRTools::HOOK_gvr_initialize_gl(gvr_context* gvr)
 {
     LOGE("HOOK_gvr_initialize_gl, tid=%d", gettid());
 	if( m_fp_gvr_initialize_gl)
 		m_fp_gvr_initialize_gl(gvr);
-	InitTex(&gUserData, 0);
+	if( gEnableHook) {
+		InitTex(&gUserData, 0);
+	}
 	gvr_sizei size = m_fp_gvr_get_maximum_effective_render_target_size(gvr);
     gvpwidth = (7 * size.width) / 20;
     LOGE("w=%d, h=%d, wid=%d", size.width, size.height, gvpwidth);

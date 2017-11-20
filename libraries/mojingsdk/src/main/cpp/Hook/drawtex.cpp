@@ -254,12 +254,12 @@ void InitData()
 //
 int InitTex( UserData *userData, int index)
 {
-//    if( userData->programObject != 0 )
-//    {
-////        eglMakeCurrent( gDisplay, gAuxSurface, gAuxSurface, gShareContext );
+    if( userData->programObject != 0 )
+    {
+//        eglMakeCurrent( gDisplay, gAuxSurface, gAuxSurface, gShareContext );
 //        return true;
-////        UninitTex();
-//    }
+        UninitTex();
+    }
 
     EGLContext curContext = eglGetCurrentContext();
     EGLDisplay curDisplay = eglGetCurrentDisplay();
