@@ -39,7 +39,7 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/MojingSDK.jar')
-    compile files('libs/MojingSDKUnity.jar')
+//    compile files('libs/MojingSDK.jar')
+//    compile files('libs/MojingSDKUnity.jar')
     compile files('libs/android-query.0.26.7.jar')
 }

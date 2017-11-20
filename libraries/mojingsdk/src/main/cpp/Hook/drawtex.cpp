@@ -264,6 +264,7 @@ int InitTex( UserData *userData, int index)
     EGLContext curContext = eglGetCurrentContext();
     EGLDisplay curDisplay = eglGetCurrentDisplay();
     EGLSurface curSurfaceRead = eglGetCurrentSurface(EGL_READ);
+
     EGLSurface curSurfaceDraw = eglGetCurrentSurface(EGL_DRAW);
     createSharedContext();
     eglMakeCurrent( gDisplay, gAuxSurface, gAuxSurface, gShareContext );
